@@ -1,0 +1,13 @@
+# Python files that should be ignored
+*.pyc
+__pycache__/
+
+# Virtual environments
+venv/
+
+# IDE specific files (e.g., from VS Code, PyCharm)
+.vscode/
+.idea/
+
+models/*
+!models/.gitkeep

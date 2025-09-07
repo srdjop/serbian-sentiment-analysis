@@ -73,14 +73,15 @@ Open your terminal and clone the project from GitHub.
 
 
 5.  **Model Evaluation:**
-    After training, you can evaluate the performance of all models saved in the models/ folder.
+    After training, you can evaluate the performance of your models.
+    The evaluation script can be used for models loaded directly from the Hugging Face Hub (default) or for those you have saved locally in the models/ folder (need to change the path in the script).
+    
     ```bash
     python src/evaluate_models.py
     ```
-6. **Sentiment Analysis (Inference)**
-    Use a trained model to analyze new text. You can add your own sentences to the texts_to_analyze list in the script and then run the script directly without any command-line arguments.
-
-    The script will automatically use the trained models saved in your models/ folder.
+7. **Sentiment Analysis (Inference)**
+    Use a trained model to analyze new text. You can add your own sentences to the *texts_to_analyze* list in the script and then run the script.
+    The inference script can be used for models loaded directly from the Hugging Face Hub (default) or for those you have saved locally in the models/ folder (need to change the path in the script).
 
     ```bash
     python src/inference.py

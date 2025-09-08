@@ -56,9 +56,9 @@ Open your terminal and clone the project from GitHub.
     ```
 
 4.  **Training a model (optional):**
-    This step is necessary only if you don't have a trained model in your models/ folder.
+    This step is necessary only if you want to train the model again; it will use the pretrained models directly from my Hugging Face Hub profile.
 
-    To train a model, run train_model.py. You can specify a model by its name from the Hugging Face Hub.
+    To train a model, run *train_model.py*. You can specify a model by its name from the Hugging Face Hub.
 
     - Using the default model (classla/bcms-bertic):
     ```bash
@@ -68,9 +68,7 @@ Open your terminal and clone the project from GitHub.
     ```bash
     python src/train_model.py --model_name google-bert/bert-base-multilingual-cased
     ```
-
     Trained models will be saved in the models/ folder.
-
 
 5.  **Model Evaluation:**
     After training, you can evaluate the performance of your models.

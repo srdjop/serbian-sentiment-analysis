@@ -1,6 +1,6 @@
 # Serbian Sentiment Analysis
 
-This project explores sentiment analysis in the Serbian language by fine-tuning pre-trained `BERT` models. The initial hypothesis was that by training a BERT model on Serbian text using a tailored dataset, it would be possible to achieve a level of accuracy comparable to sentiment models trained on English datasets such as IMDB.
+This project explores sentiment analysis in the Serbian language by fine-tuning pre-trained `BERT` models. The initial hypothesis was that by training a BERT model on Serbian text using a tailored dataset, it would be possible to achieve a level of accuracy comparable to sentiment models trained on English datasets such as IMDB. However, this hypothesis was not confirmed, as the performance gap turned out to be substantial.
 
 For this purpose, two models were evaluated:
 - `Multilingual BERT` (google-bert/bert-base-multilingual-cased)

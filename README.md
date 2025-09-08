@@ -24,7 +24,7 @@ The project also includes a feature to compare the performance of this specializ
 Open your terminal and clone the project from GitHub.
 ```bash
     git clone [https://github.com/srdjop/serbian-sentiment-analysis.git]
-    cd YourRepoName
+    cd serbian-sentiment-analysis
 ```
 
 2.  **Create and activate a virtual environment:**

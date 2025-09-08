@@ -23,7 +23,7 @@ The project also includes a feature to compare the performance of this specializ
 
 Open your terminal and clone the project from GitHub.
 ```bash
-    git clone [https://github.com/YourUsername/YourRepoName.git](https://github.com/YourUsername/YourRepoName.git)
+    git clone [https://github.com/srdjop/serbian-sentiment-analysis.git]
     cd YourRepoName
 ```
 

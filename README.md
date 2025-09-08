@@ -6,7 +6,7 @@ For this purpose, two models were evaluated:
 - `Multilingual BERT` (google-bert/bert-base-multilingual-cased)
 - `BERTić` (classla/bcms-bertic), a monolingual model specifically designed for South Slavic languages
 
-The evaluation was performed on the `*SerbMR-2C dataset*`, using `*F1-score*` as the main metric. The multilingual model reached an F1-score of **0.71**, which is significantly lower than the English benchmark on IMDB **0.93**. However, the monolingual `*BERTić*` achieved an F1-score of **0.91**, demonstrating that language-specific models can substantially improve sentiment analysis performance in low-resource languages like Serbian.
+The evaluation was performed on the `SerbMR-2C dataset`, using `F1-score` as the main metric. The multilingual model reached an F1-score of **0.71**, which is significantly lower than the English benchmark on IMDB **0.93**. However, the monolingual `BERTić` achieved an F1-score of **0.91**, demonstrating that language-specific models can substantially improve sentiment analysis performance in low-resource languages like Serbian.
 
 ---
 

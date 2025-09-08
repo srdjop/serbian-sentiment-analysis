@@ -1,8 +1,12 @@
 # Serbian Sentiment Analysis
 
-This project implements sentiment analysis on the Serbian language by fine-tuning a pre-trained BERT model. The main model used, **`classla/bcms-bertic`**, is adapted to the `SerbMR-2C.csv` dataset for classifying text into two categories: **positive** and **negative**.
+This project explores sentiment analysis in the Serbian language by fine-tuning pre-trained `BERT` models. The initial hypothesis was that by training a BERT model on Serbian text using a tailored dataset, it would be possible to achieve a level of accuracy comparable to sentiment models trained on English datasets such as IMDB.
 
-The project also includes a feature to compare the performance of this specialized model against a more general multilingual model, **`google-bert/bert-base-multilingual-cased`**.
+For this purpose, two models were evaluated:
+- `Multilingual BERT` (google-bert/bert-base-multilingual-cased)
+- `BERTić` (classla/bcms-bertic), a monolingual model specifically designed for South Slavic languages
+
+The evaluation was performed on the `*SerbMR-2C dataset*`, using `*F1-score*` as the main metric. The multilingual model reached an F1-score of **0.71**, which is significantly lower than the English benchmark on IMDB **0.93**. However, the monolingual `*BERTić*` achieved an F1-score of **0.91**, demonstrating that language-specific models can substantially improve sentiment analysis performance in low-resource languages like Serbian.
 
 ---
 

@@ -1,8 +1,12 @@
 # Serbian Sentiment Analysis
 
-This project implements sentiment analysis on the Serbian language by fine-tuning a pre-trained BERT model. The main model used, **`classla/bcms-bertic`**, is adapted to the `SerbMR-2C.csv` dataset for classifying text into two categories: **positive** and **negative**.
+This project explores sentiment analysis in the Serbian language by fine-tuning pre-trained `BERT` models. The initial hypothesis was that by training a BERT model on Serbian text using a tailored dataset, it would be possible to achieve a level of accuracy comparable to sentiment models trained on English datasets such as IMDB. However, this hypothesis was not confirmed, as the performance gap turned out to be substantial.
 
-The project also includes a feature to compare the performance of this specialized model against a more general multilingual model, **`google-bert/bert-base-multilingual-cased`**.
+For this purpose, two models were evaluated:
+- `Multilingual BERT` (google-bert/bert-base-multilingual-cased)
+- `BERTić` (classla/bcms-bertic), a monolingual model specifically designed for South Slavic languages
+
+The evaluation was performed on the `SerbMR-2C dataset`, using `F1-score` as the main metric. The multilingual model reached an F1-score of **0.71**, which is significantly lower than the English benchmark on IMDB **0.93**. However, the monolingual `BERTić` achieved an F1-score of **0.91**, demonstrating that language-specific models can substantially improve sentiment analysis performance in low-resource languages like Serbian.
 
 ---
 
@@ -23,8 +27,8 @@ The project also includes a feature to compare the performance of this specializ
 
 Open your terminal and clone the project from GitHub.
 ```bash
-    git clone [https://github.com/YourUsername/YourRepoName.git](https://github.com/YourUsername/YourRepoName.git)
-    cd YourRepoName
+    git clone [https://github.com/srdjop/serbian-sentiment-analysis.git]
+    cd serbian-sentiment-analysis
 ```
 
 2.  **Create and activate a virtual environment:**
@@ -56,9 +60,9 @@ Open your terminal and clone the project from GitHub.
     ```
 
 4.  **Training a model (optional):**
-    This step is necessary only if you don't have a trained model in your models/ folder.
+    This step is necessary only if you want to train the model again; it will use the pretrained models directly from my Hugging Face Hub profile.
 
-    To train a model, run train_model.py. You can specify a model by its name from the Hugging Face Hub.
+    To train a model, run *train_model.py*. You can specify a model by its name from the Hugging Face Hub.
 
     - Using the default model (classla/bcms-bertic):
     ```bash
@@ -68,19 +72,18 @@ Open your terminal and clone the project from GitHub.
     ```bash
     python src/train_model.py --model_name google-bert/bert-base-multilingual-cased
     ```
-
     Trained models will be saved in the models/ folder.
 
-
 5.  **Model Evaluation:**
-    After training, you can evaluate the performance of all models saved in the models/ folder.
+    After training, you can evaluate the performance of your models.
+    The evaluation script can be used for models loaded directly from the Hugging Face Hub (default) or for those you have saved locally in the models/ folder (need to change the path in the script).
+    
     ```bash
     python src/evaluate_models.py
     ```
-6. **Sentiment Analysis (Inference)**
-    Use a trained model to analyze new text. You can add your own sentences to the texts_to_analyze list in the script and then run the script directly without any command-line arguments.
-
-    The script will automatically use the trained models saved in your models/ folder.
+7. **Sentiment Analysis (Inference)**
+    Use a trained model to analyze new text. You can add your own sentences to the *texts_to_analyze* list in the script and then run the script.
+    The inference script can be used for models loaded directly from the Hugging Face Hub (default) or for those you have saved locally in the models/ folder (need to change the path in the script).
 
     ```bash
     python src/inference.py

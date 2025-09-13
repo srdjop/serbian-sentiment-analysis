@@ -18,6 +18,9 @@ The evaluation was performed on the `SerbMR-2C dataset`, using `F1-score` as the
     -   `inference.py`: Script for running sentiment analysis on new text.
 -   **`data/`**: Contains the `SerbMR-2C.csv` dataset used for training.
 -   **`models/`**: The folder where the trained models and tokenizers are saved.
+-   **`eda_viz/`**: Contains visualizations for exploratory data analysis (EDA), including plots for word and character distributions in reviews.
+-   **`error_analysis/`**: Contains analysis of the top 10 most confident prediction errors for each model, helping to understand model weaknesses.
+-   **`confusion_matrices/`**: Contains confusion matrices for all trained models to visualize classification performance.
 
 ---
 
@@ -44,16 +47,16 @@ Open your terminal and clone the project from GitHub.
         ```
 
 3.  **Install required libraries:**
-    **Note**: *torch* and *torchvision* are not included in requirements.txt due to their specific installation requirements. You must install them manual after the other dependencies.
+    **Note**: *torch* and *torchvision* are not included in requirements.txt due to their specific installation requirements. You must install the manual after the other dependencies.
     ```bash
     pip install -r requirements.txt
     ```
-    - **For user with an NVIDIA GPU:**
+    - **For users with an NVIDIA GPU:**
     Install PyTorch with CUDA support. Visit the official PyTorch website https://pytorch.org/get-started/locally/ for the most precise command. Example: 
     ```bash
     pip3 install torch torchvision --index-url https://download.pytorch.org/whl/cu126
     ```
-    - **For user without a GPU or with an AMD/Apple GPU**
+    - **For users without a GPU or with an AMD/Apple GPU**
     Install the PyTorch CPU-only version. Example:
     ```bash
     pip3 install torch torchvision
@@ -81,10 +84,15 @@ Open your terminal and clone the project from GitHub.
     ```bash
     python src/evaluate_models.py
     ```
-7. **Sentiment Analysis (Inference)**
+6. **Sentiment Analysis (Inference)**
     Use a trained model to analyze new text. You can add your own sentences to the *texts_to_analyze* list in the script and then run the script.
     The inference script can be used for models loaded directly from the Hugging Face Hub (default) or for those you have saved locally in the models/ folder (need to change the path in the script).
 
     ```bash
     python src/inference.py
     ```
+7. **Viewing EDA and Analysis Results**
+- EDA Visualizations: Open plots in `eda_viz/` to explore word and character distributions.
+- Error Analysis: Check `error_analysis/` to see the top 10 most confident errors for each model.
+- Confusion Matrices: Open images in `confusion_matrices/` to understand model misclassifications.
+

@@ -16,6 +16,9 @@ The evaluation was performed on the `SerbMR-2C dataset`, using `F1-score` as the
     -   `train_model.py`: Script for training and fine-tuning the model.
     -   `evaluate_models.py`: Script for evaluating and comparing the performance of all trained models.
     -   `inference.py`: Script for running sentiment analysis on new text.
+    -   `analyze_errors.py`: Script for analysis of the top 10 most confident prediction errors for each model.
+    -   `eda_dataset.py`: Script for creating visualizations for exploratory data analysis (EDA).
+    -   `plot_confusion.py`: Script for creating confusion matrices for all trained models.
 -   **`data/`**: Contains the `SerbMR-2C.csv` dataset used for training.
 -   **`models/`**: The folder where the trained models and tokenizers are saved.
 -   **`eda_viz/`**: Contains visualizations for exploratory data analysis (EDA), including plots for word and character distributions in reviews.
